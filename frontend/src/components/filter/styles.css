@@ -1,0 +1,51 @@
+.filter-container {
+  margin-top: 10px;
+  height: 130px;
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
+}
+
+.filter-imput {
+  width: 270px;
+  height: 50px;
+  background-color: var(--primary-color);
+  border-radius: 4px;
+  border: 1px solid var(--grey-light-color);
+  color: var(--grey-light-color);
+  font-size: 16px;
+  padding: 15px 5px 15px 5px;
+  display: flex;
+}
+
+.filter-imput::placeholder {
+  color: var(--grey-light-color);
+  font-size: 16px;
+}
+
+@media (min-width: 576px) {
+  .filter-container {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+
+  .filter-imput {
+    margin-left: 25px;
+  }
+}
+
+@media (min-width: 992px) {
+  .filter-container {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .filter-container {
+    margin-left: 110px;
+    margin-right: 110px;
+  }
+}
