@@ -1,4 +1,5 @@
 import { ApexOptions } from 'apexcharts';
+import { SalesByGender } from '../../types';
 
 export const buildPieChartConfig = (labels: string[] = [], name: string) => {
   return {
@@ -30,7 +31,7 @@ export const buildPieChartConfig = (labels: string[] = [], name: string) => {
       }
     },
     dataLabels: {
-      enabled: false
+      enabled: true
     },
     plotOptions: {
       pie: {
@@ -40,7 +41,7 @@ export const buildPieChartConfig = (labels: string[] = [], name: string) => {
           labels: {
             show: true,
             name: {
-              show: true,
+              show: false,
               offsetY: 10,
               formatter: function () {
                 return name;
@@ -64,4 +65,10 @@ export const buildPieChartConfig = (labels: string[] = [], name: string) => {
       height: '350px'
     }
   } as ApexOptions;
+};
+
+export const sumSalesBySummary = (salesByDate: SalesByGender[] = []) => {
+  return salesByDate.reduce((previousValue, currentValeu) => {
+    return previousValue + currentValeu.sum;
+  }, 0);
 };

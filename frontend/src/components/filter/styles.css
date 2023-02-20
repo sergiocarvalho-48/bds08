@@ -6,21 +6,37 @@
   padding-left: 15px;
 }
 
-.filter-imput {
+.filter-store-container {
+  display: flex;
+}
+
+.sales-store-filter-select__control {
   width: 270px;
   height: 50px;
   background-color: var(--primary-color);
   border-radius: 4px;
-  border: 1px solid var(--grey-light-color);
+  border: 1px solid var(--grey-light-color) !important;
   color: var(--grey-light-color);
   font-size: 16px;
-  padding: 15px 5px 15px 5px;
   display: flex;
 }
 
-.filter-imput::placeholder {
-  color: var(--grey-light-color);
+.sales-store-filter-select__option {
+  color: var(--grey-light-color) !important;
+}
+
+.sales-store-filter-select__indicator {
+  color: var(--grey-light-color) !important;
+}
+
+.sales-store-filter-select__placeholder {
+  padding-left: 2px;
+  color: var(--grey-light-color) !important;
   font-size: 16px;
+}
+
+.sales-store-filter-select__indicator-separator {
+  display: none;
 }
 
 @media (min-width: 576px) {
@@ -31,7 +47,7 @@
     margin-right: 30px;
   }
 
-  .filter-imput {
+  .sales-store-filter-select__control {
     margin-left: 25px;
   }
 }
